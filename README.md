@@ -4,17 +4,20 @@
 
 ![alt text](https://pbs.twimg.com/media/DMWhhKFXcAAqxeu?format=jpg&name=small)
 
-## Dag Picture:
-![alt text](https://github.com/jmilhomem/dbt_purchases_project/blob/master/images/data_pipeline.png)
-
 ### Technical detail:
 - As this project is considering a limited dataset, without the domains of each id, the data modeling is considering the "flat table technique" as the data analytical modeling.
+
 - The script will execute the whole pipeline.
-  1. Execute the dbt seed to import the files.
+  1. Execute the dbt seed to import the files available on /data.
   2. Execute the dbt run to execute the whole etl pipeline.
   3. Execute the dbt test to run the tests regarding the models created.
 
-## DataFiles description:
+- The ETL process is divided into 3 steps (and folders):
+  1. __raw:__ It has the source.yml file, which contains the source tables.
+  2. __staging:__ It has the staging models, intermediate models, which has the transformations applied.
+  3. __processed:__ It has the final analytical tables, which has the final transformations applied.
+
+## DataFiles used as source:
 
 __transactions__ - contains transaction history for all customers for a period of at least 1 year prior to their offered incentive
 - __id__ - A unique id representing a customer
@@ -42,6 +45,8 @@ The transactions file can be joined to the offers file by (category, brand, comp
 Reference:  
 https://www.kaggle.com/c/acquire-valued-shoppers-challenge/data?select=offers.csv.gz  
 
+## Dag Picture:
+![alt text](https://github.com/jmilhomem/dbt_purchases_project/blob/master/images/data_pipeline.png)
 
 ## Dependencies:
 To execute the whole pipeline (__main_etl_processes.py__ application):
@@ -58,6 +63,7 @@ Execution:
 Start your python virtualenv with ```source .venv/bin/activate```
 
 * Run: ```make run``` to start the main ingestion process.
+
 
 ### Resources:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
