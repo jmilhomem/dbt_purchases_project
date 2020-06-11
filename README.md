@@ -7,15 +7,15 @@
 ### Technical detail:
 - As this project is considering a limited dataset, without the domains of each id, the data modeling is considering the "flat table technique" as the data analytical modeling.
 
-- The script will execute the whole pipeline.
-  1. Execute the dbt seed to import the files available on __/data__.
-  2. Execute the dbt run to execute the whole etl pipeline.
-  3. Execute the dbt test to run the tests regarding the models created.
-
 - The ETL process is divided into 3 steps (and folders):
   1. __raw:__ It has the source.yml file, which contains the source tables.
   2. __staging:__ It has the staging models, intermediate models, which has the transformations applied.
   3. __processed:__ It has the final analytical tables, which has the final transformations applied.
+
+- The script will execute the whole pipeline.
+  1. Execute the __dbt seed__ to import the files available on __/data__.
+  2. Execute the __dbt run__ to execute the whole etl pipeline.
+  3. Execute the __dbt test__ to run the tests regarding the models created.
 
 ## DataFiles used as source:
 
@@ -62,7 +62,10 @@ Execution:
 ## Run
 Start your python virtualenv with ```source .venv/bin/activate```
 
-* Run: ```make run``` to start the main ingestion process.
+* Run: ```make run``` to execute the whole pipeline following described:
+  1. Execute the __dbt seed__ to import the files available on __/data__.
+  2. Execute the __dbt run__ to execute the whole etl pipeline.
+  3. Execute the __dbt test__ to run the tests regarding the models created.
 
 
 ### Resources:
