@@ -13,7 +13,7 @@
   3. __processed:__ It has the final analytical tables, which has the final transformations applied.
 
 - The script will execute the whole pipeline.
-  1. Execute the __dbt seed__ to import the files available on __/data__.
+  1. Execute the __dbt seed__ to import the files available in __/data__.
   2. Execute the __dbt run__ to execute the whole etl pipeline.
   3. Execute the __dbt test__ to run the tests regarding the models created.
 
@@ -52,7 +52,7 @@ https://www.kaggle.com/c/acquire-valued-shoppers-challenge/data?select=offers.cs
 To execute the whole pipeline (__main_etl_processes.py__ application):
 * [get dbt installed](https://docs.getdbt.com/docs/running-a-dbt-project/using-the-command-line-interface/installation/)
 * a Postgres database instance created at AWS RDS.
-* profiles.yml file filled and available on __~/.dbt__ folder
+* profiles.yml file filled and available in __~/.dbt__ folder
 * python 3.6
 * make  
 
@@ -63,7 +63,7 @@ Execution:
 Start your python virtualenv with ```source .venv/bin/activate```
 
 * Run: ```make run``` to execute the whole pipeline following described:
-  1. Execute the __dbt seed__ to import the files available on __/data__.
+  1. Execute the __dbt seed__ to import the files available in __/data__.
   2. Execute the __dbt run__ to execute the whole etl pipeline.
   3. Execute the __dbt test__ to run the tests regarding the models created.
 
