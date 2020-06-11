@@ -8,7 +8,7 @@
 - As this project is considering a limited dataset, without the domains of each id, the data modeling is considering the "flat table technique" as the data analytical modeling.
 
 - The script will execute the whole pipeline.
-  1. Execute the dbt seed to import the files available on /data.
+  1. Execute the dbt seed to import the files available on __/data__.
   2. Execute the dbt run to execute the whole etl pipeline.
   3. Execute the dbt test to run the tests regarding the models created.
 
