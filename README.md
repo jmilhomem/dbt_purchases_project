@@ -49,7 +49,7 @@ https://www.kaggle.com/c/acquire-valued-shoppers-challenge/data?select=offers.cs
 ![alt text](https://github.com/jmilhomem/dbt_purchases_project/blob/master/images/data_pipeline.png)
 
 ## Dependencies:
-To execute the whole pipeline (__main_etl_processes.py__ application):
+To execute the whole pipeline (dbt seed, dbt run and dbt test):
 * [get dbt installed](https://docs.getdbt.com/docs/running-a-dbt-project/using-the-command-line-interface/installation/)
 * a Postgres database instance created at AWS RDS.
 * profiles.yml file filled and available in __~/.dbt__ folder
