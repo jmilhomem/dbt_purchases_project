@@ -17,7 +17,7 @@
   2. Execute the __dbt run__ to execute the whole etl pipeline.
   3. Execute the __dbt test__ to run the tests regarding the models created.
 
-## DataFiles used as source:
+## Data Files used as source:
 
 __transactions__ - contains transaction history for all customers for a period of at least 1 year prior to their offered incentive
 - __id__ - A unique id representing a customer
@@ -68,7 +68,7 @@ Start your python virtualenv with ```source .venv/bin/activate```
   3. Execute the __dbt test__ to run the tests regarding the models created.
 
 
-### Resources:
+## Resources:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
 - Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
 - Join the [dbt community](http://community.getbdt.com/) to learn from other analytics engineers
