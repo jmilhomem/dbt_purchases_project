@@ -1,0 +1,19 @@
+
+version: 2
+
+models:
+    - name: analytics_offers
+      description:  "The offer analytics table, which contains the consolidated result for offers"
+      tests:
+      - unique:
+          column_name: "concat(category, company, brand)"
+      
+      - not_null:
+          column_name: "concat(category, company, brand)"
+
+
+    - name: analytics_transactions
+      description: "The transaction analytics table, which contains the analytical transaction data"
+      tests:    
+      - not_null:
+          column_name: "concat(id, category, company, brand)"
