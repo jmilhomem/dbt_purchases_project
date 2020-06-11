@@ -4,7 +4,7 @@
 
 ![alt text](https://pbs.twimg.com/media/DMWhhKFXcAAqxeu?format=jpg&name=small)
 
-### Technical detail:
+## Technical detail:
 - As this project is considering a limited dataset, without the domains of each id, the data modeling is considering the "flat table technique" as the data analytical modeling.
 
 - The ETL process is divided into 3 steps (and folders):
