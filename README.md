@@ -46,7 +46,7 @@ To execute the whole pipeline (__main_etl_processes.py__ application):
 * profiles.yml file filled and available on __~/.dbt__ folder
 
 ## Dag Picture:
-![alt text](https://pbs.twimg.com/media/DMWhhKFXcAAqxeu?format=jpg&name=small)
+![alt text](https://github.com/jmilhomem/dbt_purchases_project/blob/master/images/data_pipeline.png)
 
 ### Resources:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
