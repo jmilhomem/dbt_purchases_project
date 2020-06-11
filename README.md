@@ -4,12 +4,15 @@
 
 ![alt text](https://pbs.twimg.com/media/DMWhhKFXcAAqxeu?format=jpg&name=small)
 
+## Dag Picture:
+![alt text](https://github.com/jmilhomem/dbt_purchases_project/blob/master/images/data_pipeline.png)
+
 ### Technical detail:
 - As this project is considering a limited dataset, without the domains of each id, the data modeling is considering the "flat table technique" as the data analytical modeling.
-
-Try running the following commands:
-- dbt run
-- dbt test
+- The script will execute the whole pipeline.
+  1. Execute the dbt seed to import the files.
+  2. Execute the dbt run to execute the whole etl pipeline.
+  3. Execute the dbt test to run the tests regarding the models created.
 
 ## DataFiles description:
 
@@ -39,14 +42,22 @@ The transactions file can be joined to the offers file by (category, brand, comp
 Reference:  
 https://www.kaggle.com/c/acquire-valued-shoppers-challenge/data?select=offers.csv.gz  
 
+
 ## Dependencies:
 To execute the whole pipeline (__main_etl_processes.py__ application):
 * [get dbt installed](https://docs.getdbt.com/docs/running-a-dbt-project/using-the-command-line-interface/installation/)
 * a Postgres database instance created at AWS RDS.
 * profiles.yml file filled and available on __~/.dbt__ folder
+* python 3.6
+* make  
 
-## Dag Picture:
-![alt text](https://github.com/jmilhomem/dbt_purchases_project/blob/master/images/data_pipeline.png)
+Execution:
+* Run: ```make ``` to create the environment
+
+## Run
+Start your python virtualenv with ```source .venv/bin/activate```
+
+* Run: ```make run``` to start the main ingestion process.
 
 ### Resources:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
