@@ -46,7 +46,7 @@ https://www.kaggle.com/c/acquire-valued-shoppers-challenge/data?select=offers.cs
   2. Execute the __dbt run__ to execute the whole etl pipeline.
   3. Execute the __dbt test__ to run the tests regarding the models created.
 
-## Dag:
+## Dags:
 ![alt text](https://github.com/jmilhomem/dbt_purchases_project/blob/master/images/data_pipeline.png)
 
 ## Dependencies:
