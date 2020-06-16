@@ -4,19 +4,6 @@
 
 ![alt text](https://pbs.twimg.com/media/DMWhhKFXcAAqxeu?format=jpg&name=small)
 
-## Technical detail:
-- As this project is considering a limited dataset, without the domains of each id, the data modeling is considering the "flat table technique" as the data analytical modeling.
-
-- The ETL process is divided into 3 steps (and folders):
-  1. __raw:__ It has the source.yml file, which contains the source tables.
-  2. __staging:__ It has the staging models, intermediate models, which has the transformations applied.
-  3. __processed:__ It has the final analytical tables, which has the final transformations applied.
-
-- The script will execute the whole pipeline.
-  1. Execute the __dbt seed__ to import the files available in __/data__.
-  2. Execute the __dbt run__ to execute the whole etl pipeline.
-  3. Execute the __dbt test__ to run the tests regarding the models created.
-
 ## Data Files used as source:
 
 __transactions__ - contains transaction history for all customers for a period of at least 1 year prior to their offered incentive
@@ -44,6 +31,20 @@ The transactions file can be joined to the offers file by (category, brand, comp
 
 Reference:  
 https://www.kaggle.com/c/acquire-valued-shoppers-challenge/data?select=offers.csv.gz  
+
+
+## Technical details:
+- As this project is considering a limited dataset, without the domains of each id, the data modeling is considering the "flat table technique" as the data analytical modeling.
+
+- The ETL process is divided into 3 steps (and folders):
+  1. __raw:__ It has the source.yml file, which contains the source tables.
+  2. __staging:__ It has the staging models, intermediate models, which has the transformations applied.
+  3. __processed:__ It has the final analytical tables, which has the final transformations applied.
+
+- The script will execute the full data pipeline.
+  1. Execute the __dbt seed__ to import the files available in __/data__.
+  2. Execute the __dbt run__ to execute the whole etl pipeline.
+  3. Execute the __dbt test__ to run the tests regarding the models created.
 
 ## Dag Picture:
 ![alt text](https://github.com/jmilhomem/dbt_purchases_project/blob/master/images/data_pipeline.png)
